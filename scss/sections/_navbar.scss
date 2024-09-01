@@ -1,0 +1,19 @@
+@use '../custom' as *;
+@use'../components/mixins' as *;
+
+.menu {
+    @include gradient-initial; // gradient at mixins
+    z-index: 3;
+}
+
+
+li {
+    font-family: 'Jost', sans-serif;
+    padding: 0.7rem;
+
+    a{
+        color:rgb(236, 236, 236) !important;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+}
