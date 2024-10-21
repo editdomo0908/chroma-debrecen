@@ -48,21 +48,19 @@
 
 
 .gradient-circle {
-    display: flex;
-            align-items: center;
-            justify-content: center;
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    @include gradient-initial($color1: $primary, $color2: $secondary, $color3: $third); 
-
-    margin: 2rem;
+    background: radial-gradient(circle at center, rgba(234, 127, 94, 0.9), rgba(85, 81, 168, 0.9));
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    z-index: 5;
-  
- 
-    transition: width 0.2s, height 0.2s, top 0.2s; 
- 
+    z-index: 10;
+    transition: background 0.3s ease, width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+
+
+
    
 
 /* Media query for smaller screens */
@@ -84,7 +82,56 @@
 }
 
 
+.inner-square {
 
+        width: 71%; /* Size adjustment for the inner square */
+        height: 71%;
+        background: linear-gradient(
+        to right, 
+        #562648 15%,    /* This color will take up 10% of the space */
+        #a8a8a8 35%,             /* This color will take up from 10% to 25% */
+        #6987C9 45%, /* From 25% to 45% */
+                     /* This color will take up more space, from 45% to 65% */
+         #a8a8a8 80%, /* From 75% to 85% */
+                 /* Narrow band again */
+         #a99047 100% /* Final color from 95% to 100% */
+    );
+        position: absolute;
+        opacity: 0.2; /* Fully opaque */
+    
+    
+}
+
+
+
+
+.logo-text {
+    text-align: center;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    z-index: 1; /* Ensures text is above the inner square */
+}
+
+.logo-text .main-title {
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: lowercase;
+}
+
+.logo-text .subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+}
+
+.logo-text .location {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+    margin-top: 4px;
+}
 
 //GRADIENT BACKGROUND CLASS
 .gradient-bg {
