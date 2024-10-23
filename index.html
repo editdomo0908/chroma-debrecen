@@ -489,7 +489,7 @@
 <!-- SHOWS--------------------------------------->
 
 <section class="portfolio">
-<dic class="container">
+<div class="container">
   <div class="row text-center">
     <h1 class="display-3 fw-bold text-capitalize text-center">
      CALENDAR
@@ -502,18 +502,43 @@
 
 <!-- Filtering -->
 <div class="row text-center">
-  <div class="col-md-12">
-    <button class="btn-portfolio" type="button">All</button>
-    <button class="btn-portfolio" type="button">CSOKONAI</button>
-    <button class="btn-portfolio" type="button">GIGS</button>
-    <button class="btn-portfolio" type="button">TOUR</button>
+  <div class="col-md-12 buttons">
+    
+    <button onclick="filterById(1)" class="btn-portfolio" type="button">Card 1</button>
+    <button onclick="filterById(2)" class="btn-portfolio" type="button">Card 2</button>
+
+    <button onclick="showAll()" class="btn-portfolio" type="button">Show All</button>
+  </div>
+
+
+  </div>
   </div>
 </div>
 
+<div class="container">
+  <div class="row" id="items">
 
 
+    <div class="choice col-sm-12 col-m-6 col-lg-4" data-id="1">
+      <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Card 1</h5>
+              <p class="card-text">Some content for card 1</p>
+          </div>
+      </div>
+  </div>
+  <div class="choice col-sm-12 col-m-6 col-lg-4" data-id="2">
+      <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Card 2</h5>
+              <p class="card-text">Some content for card 2</p>
+          </div>
+      </div>
+  </div>
+  
 
-</dic>
+
+</div>
 
 
 

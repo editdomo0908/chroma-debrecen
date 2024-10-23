@@ -142,3 +142,29 @@ document.addEventListener('DOMContentLoaded', function () {
       
     });
   });
+
+ 
+  // Function to filter by specific card data-id
+var filterById = (id) => {
+    const cards = document.getElementsByClassName("choice"); // Get all cards
+    
+    for (let i = 0; i < cards.length; i++) {
+      let cardId = cards[i].getAttribute("data-id"); // Get data-id
+      
+      if (cardId == id) { // Check if the id matches
+        cards[i].classList.remove("d-none"); // Show card
+      } else {
+        cards[i].classList.add("d-none"); // Hide other cards
+      }
+    }
+  }
+  
+  // Function to show all cards
+  var showAll = () => {
+    const cards = document.getElementsByClassName("choice"); // Get all cards
+  
+    for (let i = 0; i < cards.length; i++) {
+      cards[i].classList.remove("d-none"); // Remove d-none class to show all cards
+    }
+  }
+  
